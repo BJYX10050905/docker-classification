@@ -25,7 +25,7 @@ jobs:
           
           # 2. 转换用户名为小写以符合 GHCR 规范
           OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          TARGET_IMAGE="ghcr.io/$OWNER_LOWER/yolov8:v1"
+          TARGET_IMAGE="ghcr.io/$OWNER_LOWER/classification:v2"
           
           echo "正在从 Docker Hub 拉取: $SOURCE_IMAGE"
           docker pull $SOURCE_IMAGE
